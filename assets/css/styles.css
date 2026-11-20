@@ -286,7 +286,8 @@ h3 { font-size: clamp(1.2rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2
 .designed { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 16px; }
 .designed li { background: var(--mist); border-radius: var(--radius-sm); padding: 8px 12px; color: var(--navy); }
 .designed b { color: var(--brand); font-size: 1.1rem; margin-right: 4px; }
-.dialog-previews { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 26px; }
+.dialog-previews { display: grid; grid-template-columns: 1fr; gap: 22px; margin-top: 26px; justify-items: center; }
+.dialog-previews figure { width: 100%; max-width: 300px; }
 .dialog-previews figure { margin: 0; display: grid; gap: 10px; align-content: start; }
 .dialog-previews img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); box-shadow: var(--shadow); }
 .dialog-previews figcaption { font-size: 14px; color: var(--muted); line-height: 1.4; }
@@ -498,7 +499,8 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
   .plan-grid > .plan:nth-child(3) { grid-column: 1 / -1; max-width: 560px; justify-self: center; width: 100%; }
   .founding { grid-template-columns: 1fr auto; }
   .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; }
-  .dialog-previews { grid-template-columns: repeat(4, 1fr); }
+  .dialog-previews { grid-template-columns: repeat(4, 1fr); justify-items: stretch; }
+  .dialog-previews figure { max-width: none; }
   .project-facts > div { grid-template-columns: 200px 1fr; }
 }
 
@@ -551,13 +553,16 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
   .hero-media { height: 380px; }
 }
 
+@media (max-width: 719.98px) {
+  .project-facts > div { grid-template-columns: 1fr; gap: 6px; }
+  .designed { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 380px) {
   :root { --gutter: 16px; }
   h1 { font-size: 2.3rem; }
   .btn { width: 100%; }
   .project-thumb { height: 260px; }
-  .dialog-previews { grid-template-columns: 1fr 1fr; }
-  .project-facts > div { grid-template-columns: 1fr; gap: 6px; }
   .credentials li { grid-template-columns: 1fr; gap: 4px; }
 }
 
