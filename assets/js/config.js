@@ -9,6 +9,7 @@ window.CONVERTID_CONFIG = {
   calendlyUrl: 'https://calendly.com/anajumiati/30min',
   linkedinUrl: 'https://linkedin.com/in/anajumiati/',
   tiktokUrl: 'https://www.tiktok.com/@convertID.agency',
+  instagramUrl: 'https://www.instagram.com/converid.agency/',
 
   /*
    * Contact form destination.
