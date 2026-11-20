@@ -574,3 +574,21 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
   .js .reveal { opacity: 1; transform: none; }
   .marquee p { animation: none; padding-left: 0; }
 }
+
+/* Copy table: stacked cards on phones, full table from tablet up */
+@media (max-width: 719.98px) {
+  .copy-goals .table-wrap { border: 0; overflow: visible; }
+  .copy-goals table { min-width: 0; background: transparent; }
+  .copy-goals thead { display: none; }
+  .copy-goals tbody, .copy-goals tr { display: block; }
+  .copy-goals tbody tr {
+    background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 18px 20px; margin-bottom: 14px;
+  }
+  .copy-goals tbody th { width: auto; border: 0; padding: 0 0 10px; font-size: 17px; }
+  .copy-goals td { display: block; border: 0; padding: 8px 0 0; }
+  .copy-goals td::before {
+    content: attr(data-label); display: block; font-size: 11px; font-weight: 500;
+    letter-spacing: .12em; text-transform: uppercase; color: var(--brand); margin-bottom: 2px;
+  }
+}
