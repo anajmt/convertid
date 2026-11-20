@@ -21,7 +21,7 @@ window.CONVERTID_CONFIG = {
    *   Your own:   'https://api.yourdomain.com/contact'
    * See README.md ("Connecting the contact form").
    */
-  formEndpoint: '',
+  formEndpoint: 'https://formspree.io/f/xoedlgnz',
 
   /*
    * Founding Client Partnership (US$1,750/month for three months, two places).
