@@ -139,12 +139,12 @@ h3 { font-size: clamp(1.2rem, 1.8vw, 1.4rem); font-weight: 700; line-height: 1.2
   font-size: 22px; font-weight: 700; letter-spacing: -0.01em;
   color: var(--navy); text-decoration: none;
 }
-.brand-logo { height: 50px; width: auto; }
+.brand-mark { width: 40px; height: auto; flex: none; }
 .brand:hover { color: var(--navy); }
 .brand-light { color: var(--white); }
 .brand-light:hover { color: var(--white); }
 .brand-chip { background: var(--white); border-radius: 12px; padding: 8px 10px; display: inline-grid; place-items: center; }
-.brand-chip img { height: 58px; width: auto; }
+.brand-chip img { width: 40px; height: auto; }
 
 .site-nav { display: flex; align-items: center; gap: 30px; }
 .site-nav ul { display: flex; gap: 26px; }
