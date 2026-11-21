@@ -5,7 +5,7 @@
    ========================================================================== */
 window.CONVERTID_CONFIG = {
   /* Public contact details. */
-  contactEmail: 'sales@convertid.agency',
+  contactEmail: 'ana@convertid.agency',
   calendlyUrl: 'https://calendly.com/anajumiati/30min',
   linkedinUrl: 'https://linkedin.com/in/anajumiati/',
   tiktokUrl: 'https://www.tiktok.com/@convertID.agency',

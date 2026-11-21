@@ -41,7 +41,7 @@ The site has no backend, so the form does not store or send anything by itself. 
    ```js
    formEndpoint: 'https://formspree.io/f/your-form-id',
    ```
-3. Submit a test message and confirm it arrives in `sales@convertid.agency`.
+3. Submit a test message and confirm it arrives in `ana@convertid.agency`.
 
 The form posts this JSON: `name`, `email`, `brand`, `website`, `monthly_email_revenue`, `need`, `message`, `source`. A hidden honeypot field (`company_fax`) blocks most bots.
 
