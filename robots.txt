@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://anajmt.github.io/convertid/sitemap.xml
+Sitemap: https://convertid.agency/sitemap.xml
