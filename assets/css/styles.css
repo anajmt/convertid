@@ -592,3 +592,14 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
     letter-spacing: .12em; text-transform: uppercase; color: var(--brand); margin-bottom: 2px;
   }
 }
+
+/* Language switch (EN / ID) */
+.lang-switch { display: inline-flex; align-items: center; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; background: var(--white); }
+.lang-switch a { font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: var(--slate); text-decoration: none; padding: 6px 11px; border-radius: 999px; line-height: 1; }
+.lang-switch a:hover { color: var(--navy); }
+.lang-switch a[aria-current="page"] { background: var(--navy); color: var(--white); }
+@media (max-width: 479.98px) {
+  .header-inner { gap: 10px; }
+  .lang-switch a { padding: 6px 9px; }
+  .nav-toggle { padding-left: 4px; }
+}
