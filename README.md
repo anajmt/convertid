@@ -21,12 +21,12 @@ The site is built from the ConvertID Proposal (Claude artifact "ConvertID Propos
 
 ## Before launch: checklist
 
-- [ ] **Verify the contact form end to end.** A Formspree endpoint is configured in `assets/js/config.js`, but a real test submission and inbox delivery have not yet been confirmed. Do not describe the form as verified until both are tested.
+- [ ] **Connect the contact form** (see below). Until then the form shows a "not connected" message and does not claim to send.
 - [ ] **Confirm the performance-fee term.** The proposal's measurement slide also states "from month 7, a 3% performance fee applies to email revenue above the 2x target". This is deliberately **not** shown on the site, because it is a commercial term not in the brief. Add it only once you have confirmed it is the offer you want to make publicly.
 - [ ] **Confirm the Work copy.** Project objectives, goals and "what we designed" counts are taken from the proposal's project slides. Check them once more before launch.
 - [ ] **Finalise `privacy.html`** with your form provider and the laws that apply to your markets (Australia, US, UK, Canada).
-- [x] Canonical URL and production domain are configured in the `<head>`.
-- [ ] Check the Calendly, email, WhatsApp and social links in a fresh browser.
+- [ ] Add a canonical URL and the production domain to the `<head>` once the domain is known.
+- [ ] Check the Calendly link and the TikTok URL work from a fresh browser.
 
 ## Replacing images
 
@@ -45,7 +45,7 @@ The site has no backend, so the form does not store or send anything by itself. 
 
 The form posts this JSON: `name`, `email`, `brand`, `website`, `monthly_email_revenue`, `need`, `message`, `source`. A hidden honeypot field (`company_fax`) blocks most bots.
 
-If `formEndpoint` is empty, a valid submission shows a clear not-connected message. A configured endpoint still needs a real submission test and inbox confirmation before it can be considered verified.
+Until `formEndpoint` is set, a valid submission shows: *"This contact form is not connected to an inbox yet, so your message has not been sent…"*, with the direct email address and a Calendly link. This is deliberate.
 
 ## Founding Client Partnership offer
 
@@ -60,10 +60,10 @@ Public links are in `assets/js/config.js` (email, Calendly, LinkedIn, TikTok). S
 
 ## Content notes
 
-- **Results:** do not invent performance numbers, revenue figures, open rates or testimonials. Only publish verified results with permission; label conceptual/sample work clearly. Where performance data is unavailable, say so.
-- **Goal wording:** the six-month email-revenue doubling goal is a target, not a guarantee. The baseline is the prior three-month average and the agreement must account for factors outside the agency's control. No open-ended free-work guarantee.
+- **Results:** no performance numbers, revenue figures, open rates or testimonials are shown. Each project card states that results are shared once approved by the client. The "planned measures" lines are labelled as planned.
+- **Goal wording:** the six-month goal is always described as a target, not a guarantee.
 - **Pricing:** prices are USD with "AUD pricing available on request". SMS is noted as an optional add-on, priced separately.
-- **Discovery call:** the primary website CTA is a 30-minute Calendly discovery call. The free email scorecard is a supporting introductory offer, not the paid audit. The scorecard is delivered manually, not automatically.
+- **Free email scorecard:** the proposal's "Start with the audit" steps include a free email scorecard. It is offered in the contact form and the next-steps list. The scorecard itself is delivered by you, not automated.
 
 ## Accessibility and performance
 
