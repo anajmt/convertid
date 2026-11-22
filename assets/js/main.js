@@ -205,7 +205,12 @@
     submitBtn.textContent = isLoading ? 'Sending…' : "Let's Talk";
   }
 
-  var directEmail = '<a href="mailto:' + CONFIG.contactEmail + '">' + CONFIG.contactEmail + '</a>';
+  var isIndonesian = (document.documentElement.lang || '').indexOf('id') === 0;
+  var introSubject = isIndonesian ? 'Pertanyaan tentang ConvertID' : 'ConvertID enquiry';
+  var introBody = isIndonesian
+    ? 'Halo Ana,\n\nSaya tertarik dengan layanan email marketing ConvertID untuk brand fashion saya. Bisakah kita berdiskusi?\n\nTerima kasih'
+    : 'Hi Ana,\n\nI\'m interested in ConvertID\'s email marketing for my fashion brand. Could we talk?\n\nThank you';
+  var directEmail = '<a href="mailto:' + CONFIG.contactEmail + '?subject=' + encodeURIComponent(introSubject) + '&body=' + encodeURIComponent(introBody) + '">' + CONFIG.contactEmail + '</a>';
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
