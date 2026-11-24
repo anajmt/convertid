@@ -258,6 +258,7 @@
     })
       .then(function (res) {
         if (!res.ok) throw new Error('HTTP ' + res.status);
+        if (window.convertidTrack) window.convertidTrack('generate_lead', { form_need: payload.need, form_id: 'contact-form' });
         setStatus('success', 'Thanks, your message has been sent. We will reply to you at <strong>' + payload.email.replace(/</g, '&lt;') + '</strong>.');
         form.reset();
       })

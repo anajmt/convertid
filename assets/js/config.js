@@ -12,6 +12,13 @@ window.CONVERTID_CONFIG = {
   instagramUrl: 'https://www.instagram.com/convertid.agency/',
 
   /*
+   * Google Analytics 4 Measurement ID, for example 'G-ABC123XYZ9'.
+   * Leave as '' to turn analytics off. See assets/js/analytics.js for the
+   * events that are tracked.
+   */
+  gaMeasurementId: 'G-5DCRXQVFL7',
+
+  /*
    * Contact form destination.
    * Leave as '' until a form service is connected. While it is empty the form
    * validates the input but does NOT claim the message was sent; it shows the
