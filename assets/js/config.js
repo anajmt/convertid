@@ -16,7 +16,7 @@ window.CONVERTID_CONFIG = {
    * Leave as '' to turn analytics off. See assets/js/analytics.js for the
    * events that are tracked.
    */
-  gaMeasurementId: '',
+  gaMeasurementId: 'G-5DCRXQVFL7',
 
   /*
    * Contact form destination.
