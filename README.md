@@ -14,6 +14,7 @@ The site is built from the ConvertID Proposal (Claude artifact "ConvertID Propos
 | `privacy.html` | Privacy Policy **draft** (must be reviewed before launch) |
 | `assets/css/styles.css` | All styles. Brand colours are tokens at the top of the file |
 | `assets/js/config.js` | Editable settings: contact details, form endpoint, founding offer |
+| `assets/js/analytics.js` | Google Analytics 4: loads the tag and tracks form leads, WhatsApp, email and booking clicks |
 | `assets/js/main.js` | Mobile menu, scroll reveal, project dialogs, form validation and submission |
 | `assets/images/convertid-logo-mark.png` | Official logo mark (from the proposal) |
 | `assets/images/ana-portrait.jpg` | Founder portrait (from the proposal) |
@@ -47,6 +48,21 @@ The form posts this JSON: `name`, `email`, `brand`, `website`, `monthly_email_re
 
 Until `formEndpoint` is set, a valid submission shows: *"This contact form is not connected to an inbox yet, so your message has not been sent…"*, with the direct email address and a Calendly link. This is deliberate.
 
+## Google Analytics
+
+Set `gaMeasurementId` in `assets/js/config.js` to the GA4 Measurement ID (`G-…`). Leave it empty to turn analytics off. The tag never loads on `localhost` or from a local file.
+
+Events sent (all pages, both languages):
+
+| Event | When | Extra parameters |
+| --- | --- | --- |
+| `generate_lead` | Contact form sent successfully | `form_need`, `form_id` |
+| `contact_whatsapp_click` | Any `wa.me` link | `link_location`, `link_text`, `link_url` |
+| `contact_email_click` | Any `mailto:` link, including the one in the form's error message | same |
+| `book_call_click` | Any Calendly link | same |
+
+Every event also has `page_language` (`en` or `id`). `link_url` has its query string removed, so the pre-filled intro messages are never sent to Google. In GA4, mark `generate_lead`, `contact_whatsapp_click`, `contact_email_click` and `book_call_click` as key events (Admin → Events).
+
 ## Founding Client Partnership offer
 
 The offer appears in the Pricing section (`#founding-offer`), and "Request a founding place" pre-selects the form's "Founding Client Partnership" option.
@@ -70,4 +86,4 @@ Public links are in `assets/js/config.js` (email, Calendly, LinkedIn, TikTok). S
 - Colour contrast follows the Brand Guide: navy and slate text on white and ice, brand blue buttons with white text, cyan only on navy.
 - Keyboard: skip link, visible focus rings, native `<dialog>` for project details (Escape closes them), `<details>` for FAQ.
 - Motion: scroll reveals, the hero float-in and the marquee are disabled when `prefers-reduced-motion` is set.
-- External resources: Google Fonts (DM Sans) only. No tracking scripts. Calendly and social links open on click.
+- External resources: Google Fonts (DM Sans) and Google Analytics 4 (only when `gaMeasurementId` is set). Calendly and social links open on click.
